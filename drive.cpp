@@ -16,7 +16,7 @@ void setDriveMotors() {
         leftJoystick = 0;
     if (abs(rightJoystick < 5)) 
         rightJoystick = 0;
-    setDrive(leftJoystick, rightJoystick);
+    // setDrive(leftJoystick, rightJoystick);
 }
 
 //Arcade Control Functions
