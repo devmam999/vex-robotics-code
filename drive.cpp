@@ -23,11 +23,11 @@ void setDrive(int left, int right) {
 void setDriveArcade() {
     int turn = controller.get_analog(ANALOG_RIGHT_X);
     int drive = controller.get_analog(ANALOG_LEFT_Y);
-    int left = drive + turn;
-    int right = drive - turn;
     if (abs(turn) < 5)
         turn = 0;
     if (abs(drive) < 5)
         drive = 0;
+    int left = drive + turn;
+    int right = drive - turn;
     setDrive(left, right);
 }
