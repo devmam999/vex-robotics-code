@@ -18,3 +18,12 @@ void setDriveMotors() {
         rightJoystick = 0;
     setDrive(leftJoystick, rightJoystick);
 }
+
+//Arcade Control Functions
+void setDriveArcade() {
+    int turn = controller.get_analog(ANALOG_RIGHT_X);
+    int drive = controller.get_analog(ANALOG_LEFT_Y);
+    int left = drive + turn;
+    int right = drive - turn;
+    setDrive(left, right);
+}
