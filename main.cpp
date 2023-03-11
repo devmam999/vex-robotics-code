@@ -77,6 +77,7 @@ void opcontrol() {
 
 	while (true) {
 		setDriveArcade();
+		setIntakeMotors();
 		pros::delay(10);
 	}
 }
