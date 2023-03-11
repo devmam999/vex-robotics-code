@@ -9,7 +9,7 @@ void setIntake(int power) {
 void setIntakeMotors() {
     int intakePower = 0;
     int numPressed = 0;
-    if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_Y)) {
+    if (controller.get_digitals(pros::E_CONTROLLER_DIGITAL_Y)) {
         numPressed += 1;
         if (numPressed % 2 == 1)
             intakePower = 127;
