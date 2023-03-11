@@ -6,9 +6,9 @@ void setIntake(int power) {
 }
 
 //get the intake controlled
+bool intakeOn = false;
 void setIntakeMotors() {
     int intakePower = 0;
-    bool intakeOn = false;
     if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_Y)) {
         intakeOn = !intakeOn;
         if (intakeOn) 
