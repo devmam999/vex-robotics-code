@@ -73,9 +73,8 @@ void opcontrol(void);
 
 #ifdef __cplusplus
 #include "subsystemHeaders/drive.hpp"
-#include "subsystemHeaders/intake.hpp"
+#include "subsystemHeaders/intakeRoller.hpp"
 #include "subsystemHeaders/globals.hpp"
-#include "subsystemHeaders/roller.hpp"
 /**
  * You can add C++-only headers here
  */
