@@ -8,7 +8,7 @@ pros::Motor driveRightFront(4, pros::E_MOTOR_GEARSET_06, true, pros::E_MOTOR_ENC
 //Intake port
 pros::Motor intake(5, pros::E_MOTOR_GEARSET_06, false, pros::E_MOTOR_ENCODER_COUNTS);
 //Roller port
-pros::Motor intake(5, pros::E_MOTOR_GEARSET_06, false, pros::E_MOTOR_ENCODER_COUNTS);
+pros::Motor roller(5, pros::E_MOTOR_GEARSET_06, false, pros::E_MOTOR_ENCODER_COUNTS);
 
 //Controller
 pros::Controller controller(pros::E_CONTROLLER_MASTER);
