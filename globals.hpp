@@ -10,6 +10,8 @@ extern pros::Motor driveRightFront;
 extern pros::Motor intake;
 //Roller
 extern pros::Motor roller;
+//Catapult
+extern pros::Motor catapult;
 
 //Controller
 extern pros::Controller controller;
