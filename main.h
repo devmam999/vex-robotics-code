@@ -75,6 +75,7 @@ void opcontrol(void);
 #include "subsystemHeaders/drive.hpp"
 #include "subsystemHeaders/intakeRoller.hpp"
 #include "subsystemHeaders/globals.hpp"
+#include "subsystemHeaders/catapult.hpp"
 /**
  * You can add C++-only headers here
  */
