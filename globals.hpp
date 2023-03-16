@@ -2,12 +2,16 @@
 
 /*drivetrain (extern is used for something to 
 have global access to a variable)*/
-extern pros::Motor driveLeftBack;
-extern pros::Motor driveLeftFront;
-extern pros::Motor driveRightBack;
-extern pros::Motor driveRightFront;
+extern pros::Motor driveLeft1;
+extern pros::Motor driveLeft2;
+extern pros::Motor driveLeft3;
+extern pros::Motor driveRight1;
+extern pros::Motor driveRight2;
+extern pros::Motor driveRight3;
 //Intake
 extern pros::Motor intake;
+//Outtake
+extern pros::Motor outtake;
 //Roller
 extern pros::Motor roller;
 //Catapult
