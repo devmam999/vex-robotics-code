@@ -5,10 +5,11 @@ void setCatapult(int power) {
     catapult = power;
 }
 
+//Setting up Catapult motor
 int catapultPower = 0;
 bool catapultOn = false;
 void setCatapultMotor() {
-    if (pros::c::adi_digital_read(limitSwitch)) {
+    if (limitSwitch.get_new_press()) {
         catapultOn = !catapultOn;
         if (catapultOn) {
             catapultPower = 127;
@@ -18,7 +19,7 @@ void setCatapultMotor() {
         }
     }
     if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_R1)) {
-        if (!pros::c::adi_digital_read(limitSwitch))
+        if (!limitSwitch.get_value())
             catapultPower = 0;
         else {
             catapultPower = 127;
