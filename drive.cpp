@@ -2,10 +2,12 @@
 
 //Helper Functions
 void setDrive(int left, int right) {
-    driveLeftBack = left;
-    driveLeftFront = left;
-    driveRightBack = right;
-    driveRightFront = right;
+    driveLeft1 = left;
+    driveLeft2 = left;
+    driveLeft3 = left;
+    driveRight1 = right;
+    driveRight2 = right;
+    driveRight3 = right;
 }
 
 //Driver Control Functions (Don't need for now)
@@ -16,7 +18,7 @@ void setDrive(int left, int right) {
         leftJoystick = 0;
     if (abs(rightJoystick < 5)) 
         rightJoystick = 0;
-    setDrive(leftJoystick, rightJoystick);
+    // setDrive(leftJoystick, rightJoystick);
 }*/
 
 //Arcade Control Functions
