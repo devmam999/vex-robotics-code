@@ -12,6 +12,8 @@ extern pros::Motor intake;
 extern pros::Motor roller;
 //Catapult
 extern pros::Motor catapult;
+//Limit Switch
+extern pros::ADIDigitalIn limitSwitch;
 
 //Controller
 extern pros::Controller controller;
