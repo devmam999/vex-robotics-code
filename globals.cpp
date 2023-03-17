@@ -14,7 +14,7 @@ pros::Motor outtake(9, pros::E_MOTOR_GEARSET_06, true, pros::E_MOTOR_ENCODER_COU
 //Roller port
 pros::Motor roller(9, pros::E_MOTOR_GEARSET_06, false, pros::E_MOTOR_ENCODER_COUNTS);
 //Catapult port
-pros::Motor catapult(1, pros::E_MOTOR_GEARSET_18, false, pros::E_MOTOR_ENCODER_COUNTS);
+pros::Motor catapult(1, pros::E_MOTOR_GEARSET_06, false, pros::E_MOTOR_ENCODER_COUNTS);
 //Limit switch
 pros::ADIDigitalIn limitSwitch('1');
 
