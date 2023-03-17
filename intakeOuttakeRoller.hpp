@@ -6,8 +6,10 @@ void setIntake(int theIntakePower);
 void setRoller(int theRollerPower);
 //outtake
 void setOuttake(int theOuttakePower);
-//Set intake (outtake is inside intake)
+//Set intake
 void setIntakeMotor();
+//Set outtake
+void setOuttakeMotor();
 //Set roller
 void setRollerMotor();
 
