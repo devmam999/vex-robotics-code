@@ -22,18 +22,25 @@ void setIntakeMotor() {
         intakeOn = !intakeOn;
         if (intakeOn) {
             intakePower = 127;
-            if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_L2)) {
-                outtakePower = 127;
-            }
-            else {
-                outtakePower = 0;
-            }
         }
         else {
             intakePower = 0;
         }     
     }
     setIntake(intakePower);
+}
+void setOuttakeMotor() {
+    if (intakeOn) {
+        if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_L2))
+            outtakePower = 127;
+        else {
+            outtakePower = 0;
+        }
+    }
+    else {
+        outtakePower = 0;
+    }
+    setOuttake(outtakePower);
 }
 int rollerPower = 0;
 void setRollerMotor() {
