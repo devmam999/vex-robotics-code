@@ -23,8 +23,8 @@ void setDrive(int left, int right) {
 
 //Arcade Control Functions
 void setDriveArcade() {
-    int turn = controller.get_analog(ANALOG_RIGHT_X);
-    int drive = controller.get_analog(ANALOG_LEFT_Y);
+    int drive = controller.get_analog(ANALOG_RIGHT_X);
+    int turn = controller.get_analog(ANALOG_LEFT_Y);
     if (abs(turn) < 5)
         turn = 0;
     if (abs(drive) < 5)
