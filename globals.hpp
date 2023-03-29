@@ -8,12 +8,8 @@ extern pros::Motor driveLeft3;
 extern pros::Motor driveRight1;
 extern pros::Motor driveRight2;
 extern pros::Motor driveRight3;
-//Intake
-extern pros::Motor intake;
-//Outtake
-extern pros::Motor outtake;
-//Roller
-extern pros::Motor roller;
+//Intake and Roller
+extern pros::Motor rollerIntake;
 //Catapult
 extern pros::Motor catapult;
 //Limit Switch
