@@ -77,10 +77,9 @@ void opcontrol() {
 
 	while (true) {
 		setDriveArcade();
-		setIntakeMotor();
-		setOuttakeMotor();
-		setRollerMotor();
-		setCatapultMotor();
-		pros::delay(10);
+		setRollerIntakeMotor();
+		setCatapultMotorCase1();
+		setCatapultMotorCase2();
+		pros::delay(20);
 	}
 }
