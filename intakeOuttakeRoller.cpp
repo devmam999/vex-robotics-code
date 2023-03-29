@@ -1,53 +1,35 @@
 #include "main.h"
 
 //set the intake and control as well as outtake
-void setIntake(int theIntakePower) {
-    intake = theIntakePower;
+void setRollerIntake(int theRollerIntakePower) {
+    rollerIntake = theRollerIntakePower;
 }
 
-void setOuttake(int theOuttakePower) {
-    outtake = theOuttakePower;
+int rollerIntakePower = 0;
+bool rollerIntakeOn = false;
+
+//intake and roller functions
+void setRollerIntakeMotor() {
+    if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_L1)) 
+        rollerIntakeOn = !rollerIntakeOn;
+    if (rollerIntakeOn && !controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2)) {
+        if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_L2)) {
+            rollerIntakePower = -127;
+        }
+        else {
+            rollerIntakePower = 127;
+        }
+    }
+    else if (!rollerIntakeOn && !controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2)) {
+        rollerIntakePower = 0;
+    }
+    if (!rollerIntakeOn) {
+        if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2)) 
+            rollerIntakePower = 127;
+        else {
+            rollerIntakePower = 0;
+        }
+    }
+    setRollerIntake(rollerIntakePower);
 }
 
-void setRoller(int theRollerPower) {
-    roller = theRollerPower;
-}
- 
-//intake and control functions 
-int intakePower = 0;
-bool intakeOn = false;
-int outtakePower = 0;
-void setIntakeMotor() {
-    if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_L1)) {
-        intakeOn = !intakeOn;
-        if (intakeOn) {
-            intakePower = 127;
-        }
-        else {
-            intakePower = 0;
-        }     
-    }
-    setIntake(intakePower);
-}
-void setOuttakeMotor() {
-    if (intakeOn) {
-        if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_L2))
-            outtakePower = 127;
-        else {
-            outtakePower = 0;
-        }
-    }
-    else {
-        outtakePower = 0;
-    }
-    setOuttake(outtakePower);
-}
-int rollerPower = 0;
-void setRollerMotor() {
-    if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2)) 
-        rollerPower = 127;
-    else {
-        rollerPower = 0;
-    }
-    setRoller(rollerPower);
-}
