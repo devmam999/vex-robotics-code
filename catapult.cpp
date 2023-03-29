@@ -1,19 +1,19 @@
 #include "main.h"
 
-//setup of Catapult
-void setCatapult(int power) {
-    catapult = power;
-}
-
 //Setting up Catapult motor
-int catapultPower = 0;
-void setCatapultMotor() {
+bool lsSensorOn = false;
+void setCatapultMotorCase1() {
+    if (!limitSwitch.get_value()) {
+        catapult = 127;
+    }
+    else if (limitSwitch.get_value() && !controller.get_digital(pros::E_CONTROLLER_DIGITAL_R1)) {
+        catapult = 0;
+    }  
+}
+void setCatapultMotorCase2() {
     if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_R1)) {
-        if (limitSwitch.get_value()) 
-            catapultPower = 127;
-        else {
-            catapultPower = 0;
+        while (limitSwitch.get_value()) {
+            catapult = 127;
         }
     }
-    setCatapult(catapultPower);
 }
