@@ -1,7 +1,6 @@
 #include "main.h"
 
 //Setting up Catapult motor
-bool lsSensorOn = false;
 void setCatapultMotorCase1() {
     if (!limitSwitch.get_value()) {
         catapult = 127;
