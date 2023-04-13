@@ -60,6 +60,7 @@ void competition_initialize() {}
  */
 void autonomous() {
 	moveRobot(400);
+	pros::delay(10);
 }
 
 /**
