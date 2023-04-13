@@ -2,12 +2,8 @@
 
 //Helper Functions
 void setDrive(int left, int right) {
-    driveLeft1 = left;
-    driveLeft2 = left;
-    driveLeft3 = left;
-    driveRight1 = right;
-    driveRight2 = right;
-    driveRight3 = right;
+    driveLeft = left;
+    driveRight = right;
 }
 
 //Driver Control Functions (Don't need for now)
